@@ -1,99 +1,113 @@
-<section>
+<!doctype html>
+<html>
 
-  <div id='banner'>
-    <div id='title'>Hang_Man</div>
-    <div id='player_divs'>
-      <div id='player_one' class='player_div'>
-        <b>Player 1:</b><br>
-        <div class='player_name'>
-          <input type='text' class='player_input' placeholder="Enter Player 1's name">
-        </div>
-      </div>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+  </head>
 
-      <div id='scoreboard'>
-        <div id='player_one_score' class='player_score'>0</div>
-        <div id='player_two_score' class='player_score'>0</div>
-      </div>
+  <body>
 
-      <div id='player_two' class='player_div'>
-        <b>Player 2:</b><br>
-        <div class='player_name'>
-          <input type='text' class='player_input' placeholder="Enter Player 2's name">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id='letter_guess_record'>
     <section>
-      <div class='alphabet'>A</div>
-      <div class='alphabet'>B</div>
-      <div class='alphabet'>C</div>
-      <div class='alphabet'>D</div>
-      <div class='alphabet'>E</div>
-      <div class='alphabet'>F</div>
-      <div class='alphabet'>G</div>
-      <div class='alphabet'>H</div>
-      <div class='alphabet'>I</div>
-      <div class='alphabet'>J</div>
-      <div class='alphabet'>K</div>
-      <div class='alphabet'>L</div>
-      <div class='alphabet'>M</div>
-      <div class='alphabet'>N</div>
-      <div class='alphabet'>O</div>
-      <div class='alphabet'>P</div>
-      <div class='alphabet'>Q</div>
-      <div class='alphabet'>R</div>
-      <div class='alphabet'>S</div>
-      <div class='alphabet'>T</div>
-      <div class='alphabet'>U</div>
-      <div class='alphabet'>V</div>
-      <div class='alphabet'>W</div>
-      <div class='alphabet'>X</div>
-      <div class='alphabet'>Y</div>
-      <div class='alphabet'>Z</div>
+
+      <div id='banner'>
+        <div id='title'>Hang_Man</div>
+        <div id='player_divs'>
+          <div id='player_one' class='player_div'>
+            <b>Player 1:</b><br>
+            <div class='player_name'>
+              <input type='text' class='player_input' placeholder="Enter Player 1's name">
+            </div>
+          </div>
+
+          <div id='scoreboard'>
+            <div id='player_one_score' class='player_score'>0</div>
+            <div id='player_two_score' class='player_score'>0</div>
+          </div>
+
+          <div id='player_two' class='player_div'>
+            <b>Player 2:</b><br>
+            <div class='player_name'>
+              <input type='text' class='player_input' placeholder="Enter Player 2's name">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id='letter_guess_record'>
+        <section>
+          <div class='alphabet'>A</div>
+          <div class='alphabet'>B</div>
+          <div class='alphabet'>C</div>
+          <div class='alphabet'>D</div>
+          <div class='alphabet'>E</div>
+          <div class='alphabet'>F</div>
+          <div class='alphabet'>G</div>
+          <div class='alphabet'>H</div>
+          <div class='alphabet'>I</div>
+          <div class='alphabet'>J</div>
+          <div class='alphabet'>K</div>
+          <div class='alphabet'>L</div>
+          <div class='alphabet'>M</div>
+          <div class='alphabet'>N</div>
+          <div class='alphabet'>O</div>
+          <div class='alphabet'>P</div>
+          <div class='alphabet'>Q</div>
+          <div class='alphabet'>R</div>
+          <div class='alphabet'>S</div>
+          <div class='alphabet'>T</div>
+          <div class='alphabet'>U</div>
+          <div class='alphabet'>V</div>
+          <div class='alphabet'>W</div>
+          <div class='alphabet'>X</div>
+          <div class='alphabet'>Y</div>
+          <div class='alphabet'>Z</div>
+        </section>
+      </div>
+
+      <div id='gallows'>
+        <div id='top' class='bar'></div>
+        <div id='side' class='bar'></div>
+        <div id='base' class='bar'></div>
+        <div id='hook' class='bar'></div>
+
+        <div id='head' class='body'></div>
+        <div id='torso' class='body'></div>
+        <div id='leftarm' class='body'></div>
+        <div id='rightarm' class='body'></div>
+        <div id='rightleg' class='body'></div>
+        <div id='leftleg' class='body'></div>
+      </div>
+
+      <div id='input'>
+        <div id='input_instruction'> <b>Player 1, enter a word:<b></div>
+        <input type='text' id='input_field'>
+        <input type='submit' id='submit'>
+      </div>
+
+      <div id='guess'>
+        <div id='guess_input_instruction'><b> Player 2, guess a letter: </b></div>
+        <input type='text' id='letter_guess' maxlength='1'>
+        <input type='submit' id='guess_submit'>
+      </div>
+
+      <div id='word'>
+        <div id='letters'></div>
+        <div id='blanks'></div>
+      </div>
+
     </section>
-  </div>
 
-  <div id='gallows'>
-    <div id='top' class='bar'></div>
-    <div id='side' class='bar'></div>
-    <div id='base' class='bar'></div>
-    <div id='hook' class='bar'></div>
+    <div id='game_over_banner'>
+      <p>Way to go!</p>
+      <input type='button' id='new_game_btn' value='New Game'>
+    </div>
 
-    <div id='head' class='body'></div>
-    <div id='torso' class='body'></div>
-    <div id='leftarm' class='body'></div>
-    <div id='rightarm' class='body'></div>
-    <div id='rightleg' class='body'></div>
-    <div id='leftleg' class='body'></div>
-  </div>
+    <div id='you_lose_banner'>
+      <p>Aw, snap</p>
+      <input type='button' id='you_lose_btn' value='New Game'>
+    </div>
 
-  <div id='input'>
-    <div id='input_instruction'> <b>Player 1, enter a word:<b></div>
-    <input type='text' id='input_field'>
-    <input type='submit' id='submit'>
-  </div>
+    <script src="script.js"></script>
+  </body>
 
-  <div id='guess'>
-    <div id='guess_input_instruction'><b> Player 2, guess a letter: </b></div>
-    <input type='text' id='letter_guess' maxlength='1'>
-    <input type='submit' id='guess_submit'>
-  </div>
-
-  <div id='word'>
-    <div id='letters'></div>
-    <div id='blanks'></div>
-  </div>
-
-</section>
-
-<div id='game_over_banner'>
-  <p>Way to go!</p>
-  <input type='button' id='new_game_btn' value='New Game'>
-</div>
-
-<div id='you_lose_banner'>
-  <p>Aw, snap</p>
-  <input type='button' id='you_lose_btn' value='New Game'>
-</div>
+</html>
